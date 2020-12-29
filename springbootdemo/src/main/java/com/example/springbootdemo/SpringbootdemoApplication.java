@@ -14,7 +14,7 @@ public class SpringbootdemoApplication {
 
     @RequestMapping("/")
     public String frist(){
-        return "My frist index";
+        return "My frist index ";
     }
 
     public static void main(String[] args) {
