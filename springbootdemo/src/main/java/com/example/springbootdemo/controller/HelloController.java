@@ -1,4 +1,4 @@
-package com.example.springbootdemo.commom;
+package com.example.springbootdemo.controller;
 
 import com.example.springbootdemo.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,5 +22,4 @@ public class HelloController {
         System.out.println("hello");
         return "hello";
     }
-
 }
