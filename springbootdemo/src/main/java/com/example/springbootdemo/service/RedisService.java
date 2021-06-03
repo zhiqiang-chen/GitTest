@@ -28,7 +28,8 @@ public class  RedisService{
     public User getUser(String name){
         ValueOperations ops=redisTemplate.opsForValue();
         log.info("opt:{}",ops.get("quellan"));
-        return (User) ops.get(name);
+        User user = (User) ops.get(name);
+        return user;
     }
 
 }
