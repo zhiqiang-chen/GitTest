@@ -8,6 +8,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * TODO
  *
@@ -22,6 +24,7 @@ public class  RedisService{
     public boolean setUser(User user){
         ValueOperations ops=redisTemplate.opsForValue();
         ops.set(user.getNickname(),user);
+        redisTemplate.expire(user.getNickname(), 10L,TimeUnit.MINUTES);
         log.info("{}",user.toString());
         return true;
     }
@@ -32,4 +35,8 @@ public class  RedisService{
         return user;
     }
 
+    public String test() {
+        String test = "shuju";
+        return test;
+    }
 }
