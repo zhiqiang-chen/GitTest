@@ -27,24 +27,24 @@ import java.net.UnknownHostException;
 @Slf4j
 public class RedisConfig  {
 
-	@Value("${spring.redis.jedis.pool.max-active}")
-	private int maxActive;
-	@Value("${spring.redis.jedis.pool.max-wait}")
-	private int maxWaitMillis;
-	@Value("${spring.redis.jedis.pool.min-idle}")
-	private int minIdle;
-	@Value("${spring.redis.jedis.pool.max-idle}")
-	private int maxIdle;
-	@Value("${spring.redis.host}")
-	private String host;
-	@Value("${spring.redis.port}")
-	private int port;
-	@Value("${spring.redis.password}")
-	private String password;
-	@Value("${spring.redis.database}")
-	private int database;
-	@Value("${spring.redis.timeout}")
-	private String timeout;
+//	@Value("${spring.redis.jedis.pool.max-active}")
+//	private int maxActive;
+//	@Value("${spring.redis.jedis.pool.max-wait}")
+//	private int maxWaitMillis;
+//	@Value("${spring.redis.jedis.pool.min-idle}")
+//	private int minIdle;
+//	@Value("${spring.redis.jedis.pool.max-idle}")
+//	private int maxIdle;
+//	@Value("${spring.redis.host}")
+//	private String host;
+//	@Value("${spring.redis.port}")
+//	private int port;
+//	@Value("${spring.redis.password}")
+//	private String password;
+//	@Value("${spring.redis.database}")
+//	private int database;
+//	@Value("${spring.redis.timeout}")
+//	private String timeout;
 
 	@Bean
 	@ConditionalOnMissingBean(name = "redisTemplate")

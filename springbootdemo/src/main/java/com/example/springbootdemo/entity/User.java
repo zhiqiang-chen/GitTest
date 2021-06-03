@@ -11,8 +11,7 @@ import java.io.Serializable;
  * @date 2021/6/2 17:11
  */
 @Data
-public class User implements Serializable {
-    private static final long serialVersionUID = 1L;
+public class User {
     private Long id;
     private String userName;
     private String password;
