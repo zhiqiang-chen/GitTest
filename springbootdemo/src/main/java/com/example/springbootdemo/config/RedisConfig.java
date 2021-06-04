@@ -44,7 +44,7 @@ public class RedisConfig  {
 //	@Value("${spring.redis.database}")
 //	private int database;
 //	@Value("${spring.redis.timeout}")
-//	private String timeout;
+//	private long timeout;
 
 	@Bean
 	@ConditionalOnMissingBean(name = "redisTemplate")

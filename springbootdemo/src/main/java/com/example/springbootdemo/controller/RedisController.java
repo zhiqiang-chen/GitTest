@@ -71,9 +71,15 @@ public class RedisController {
             //从数据库中获取信息
             log.info("从数据库中获取数据");
             str = redisService.test();
-            //数据插入缓存（set中的参数含义：key值，user对象，缓存存在时间10（long类型），时间单位）
-            redisUtils.set(id,str,1L, TimeUnit.MINUTES);
+            //空结果进行缓存,避免缓存穿透；设置较短的过期时间
+            if(str==""||str==null){
+                redisUtils.set(id,"",10L, TimeUnit.SECONDS);
+            }else {
+                //数据插入缓存（set中的参数含义：key值，user对象，缓存存在时间10（long类型），时间单位）
+                redisUtils.set(id,str,1L, TimeUnit.MINUTES);
+            }
             log.info("数据插入缓存" + str);
+
         }
         return str;
     }
