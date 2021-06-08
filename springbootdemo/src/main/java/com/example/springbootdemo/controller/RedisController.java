@@ -73,10 +73,10 @@ public class RedisController {
             str = redisService.test();
             //空结果进行缓存,避免缓存穿透；设置较短的过期时间
             if(str==""||str==null){
-                redisUtils.set(id,"",10L, TimeUnit.SECONDS);
+                redisUtils.set(id,"",30L, TimeUnit.SECONDS);
             }else {
                 //数据插入缓存（set中的参数含义：key值，user对象，缓存存在时间10（long类型），时间单位）
-                redisUtils.set(id,str,1L, TimeUnit.MINUTES);
+                redisUtils.set(id,str,10L, TimeUnit.MINUTES);
             }
             log.info("数据插入缓存" + str);
 

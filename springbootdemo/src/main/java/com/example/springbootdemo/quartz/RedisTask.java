@@ -25,7 +25,7 @@ public class RedisTask {
     @Autowired
     private RedisUtils redisUtils;
 
-    @Scheduled(cron = "50 * * ? * *")
+    //@Scheduled(cron = "5 * * ? * *")
     public void redisTest(){
         log.info("缓存定时器开始执行");
         String id = "111";
