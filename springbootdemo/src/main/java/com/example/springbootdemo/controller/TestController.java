@@ -26,7 +26,7 @@ public class TestController {
     @RequestMapping("/getInfo")
     public AppReply getInfo(String userId){
 //        UserInfoEntity userInfoEntity = testService.getById(userId);
-        List<Map<String,Object>> list = testService.getById(userId);
+        List<Map<String,Object>> list = testService.getInfo(userId);
         Map<String,Object> map = new HashMap<>();
         map.put("list",list);
         return AppReply.success(map);

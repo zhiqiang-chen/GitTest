@@ -26,8 +26,8 @@ public class TestService {
     @Autowired
     private UserInfoDao userInfoDao;
 
-    public List<Map<String,Object>> getById(String userId) {
-        UserInfoEntity userInfoEntity = userInfoDao.selectById(userId);
+    public List<Map<String,Object>> getInfo(String userId) {
+//        UserInfoEntity userInfoEntity = userInfoDao.selectById(userId);
         QueryWrapper<UserInfoEntity> wrapper  = new QueryWrapper<UserInfoEntity>();
         wrapper.eq(!StringUtils.isNullOrEmpty(""),"name","小兰");
         List<Map<String,Object>> a = userInfoDao.selectMaps(wrapper);
