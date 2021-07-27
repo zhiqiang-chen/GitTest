@@ -2,6 +2,7 @@ package com.example.springbootdemo.commom;
 
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
+import org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryBuilder;
 
 /**
  * TODO
@@ -11,17 +12,17 @@ import cn.hutool.json.JSONUtil;
  */
 public class Main {
     public static void main(String[] args) {
-        String workData = "{\"data\":null,\"msg\": \"请求成功\",\"code\": \"1\"}";
-        cn.hutool.json.JSONObject jsonObject = JSONUtil.parseObj(workData);
-        JSONObject dataArray = jsonObject.getJSONObject("data");
-        String code = jsonObject.getStr("code");
-        System.out.println(code);
-        for(int i =0;i<3;i++){
-            if(dataArray.isEmpty()&&i==1){
-                continue;
-            }
-            System.out.println("打印："+i);
-        }
+//        String workData = "{\"data\":null,\"msg\": \"请求成功\",\"code\": \"1\"}";
+//        cn.hutool.json.JSONObject jsonObject = JSONUtil.parseObj(workData);
+//        JSONObject dataArray = jsonObject.getJSONObject("data");
+//        String code = jsonObject.getStr("code");
+//        System.out.println(code);
+//        for(int i =0;i<3;i++){
+//            if(dataArray.isEmpty()&&i==1){
+//                continue;
+//            }
+//            System.out.println("打印："+i);
+//        }
 
     }
 }
