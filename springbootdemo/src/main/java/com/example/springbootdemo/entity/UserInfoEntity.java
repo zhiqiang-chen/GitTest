@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import javax.persistence.Column;
+
 /**
  * TODO
  *
@@ -29,7 +31,8 @@ public class UserInfoEntity {
     /**
      * 姓名
      */
-    private String name;
+    @Column(name = "name_as")
+    private String nameAs;
     /**
      * 年龄
      */

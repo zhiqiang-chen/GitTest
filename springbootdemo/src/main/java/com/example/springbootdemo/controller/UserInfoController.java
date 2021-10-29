@@ -31,7 +31,8 @@ public class UserInfoController {
      */
     @RequestMapping("/getInfo")
     public UserInfoEntity getInfo(String userId){
-        UserInfoEntity userInfoEntity = userInfoService.getById(userId);
+//        UserInfoEntity userInfoEntity = userInfoService.getById(userId);
+        UserInfoEntity userInfoEntity = userInfoService.queryTest(userId);
         return userInfoEntity;
     }
     /**
@@ -83,7 +84,7 @@ public class UserInfoController {
     @RequestMapping("/saveInfo")
     public Boolean saveInfo(){
         UserInfoEntity userInfoEntity = new UserInfoEntity();
-        userInfoEntity.setName("小龙");
+        userInfoEntity.setNameAs("小龙");
         userInfoEntity.setSkill("JAVA");
         userInfoEntity.setAge(18);
         userInfoEntity.setFraction(59L);
@@ -100,13 +101,13 @@ public class UserInfoController {
     public Boolean saveInfoList(){
         //创建对象
         UserInfoEntity sans = new UserInfoEntity();
-        sans.setName("Sans");
+        sans.setNameAs("Sans");
         sans.setSkill("睡觉");
         sans.setAge(18);
         sans.setFraction(60L);
         sans.setEvaluate("Sans是一个爱睡觉,并且身材较矮骨骼巨大的骷髅小胖子");
         UserInfoEntity papyrus = new UserInfoEntity();
-        papyrus.setName("papyrus");
+        papyrus.setNameAs("papyrus");
         papyrus.setSkill("JAVA");
         papyrus.setAge(18);
         papyrus.setFraction(58L);

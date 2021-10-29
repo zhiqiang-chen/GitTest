@@ -14,4 +14,5 @@ import org.springframework.stereotype.Repository;
 @Mapper
 @Repository
 public interface UserInfoDao extends BaseMapper<UserInfoEntity> {
+    UserInfoEntity queryTest(String userId);
 }

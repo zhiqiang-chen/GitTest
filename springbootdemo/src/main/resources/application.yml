@@ -24,7 +24,16 @@ spring:
         min-idle: 0
     database: 8
 
-#mybatis配置
+
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy=org:
+          hibernate:
+            boot:
+              model:
+                naming:
+                  PhysicalNamingStrategyStandardImpl:#mybatis配置
 mybatis-plus:
   global-config:
     db-config:
@@ -43,3 +52,4 @@ spring.activiti.history-level: full
 spring.activiti.db-history-used: true
 #自动部署
 spring.activiti.check-process-definitions: false
+

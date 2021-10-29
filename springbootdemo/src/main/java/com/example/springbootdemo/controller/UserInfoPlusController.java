@@ -59,7 +59,7 @@ public class UserInfoPlusController {
         //模糊查询名字带有"小"或者年龄大于18的学生
         //等价SQL: SELECT id,name,age,skill,evaluate,fraction FROM user_info WHERE name LIKE '%小%' OR age > 18
         QueryWrapper<UserInfoEntity> queryWrapper4 = new QueryWrapper<>();
-        queryWrapper4.lambda().like(UserInfoEntity::getName,"小");
+        queryWrapper4.lambda().like(UserInfoEntity::getNameAs,"小");
         queryWrapper4.lambda().or().gt(UserInfoEntity::getAge,18);
         List<UserInfoEntity> userInfoEntityList4 = userInfoService.list(queryWrapper4);
         result.put("studentOr",userInfoEntityList4);

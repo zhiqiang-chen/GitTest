@@ -12,4 +12,5 @@ import com.example.springbootdemo.entity.UserInfoEntity;
  * @date 2021/6/11 10:29
  */
 public interface UserInfoService extends IService<UserInfoEntity> {
+    UserInfoEntity queryTest(String userId);
 }
