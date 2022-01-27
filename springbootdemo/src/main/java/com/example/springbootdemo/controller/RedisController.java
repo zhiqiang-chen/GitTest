@@ -34,7 +34,7 @@ public class RedisController {
      */
     @RequestMapping("/getUser")
     public User getUser(){
-        String name="quellan";
+        String name="quellanq";
         return redisService.getUser(name);
     }
     /**
